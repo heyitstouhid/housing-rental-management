@@ -1,0 +1,6 @@
+<Project>
+  <Target Name="KillRunningExe" BeforeTargets="BeforeBuild">
+	<!-- Kill any running instance of the project's assembly to avoid file-locks during build -->
+	<Exec Command='taskkill /f /im "$(AssemblyName).exe" /t' ContinueOnError="true" />
+  </Target>
+</Project>
