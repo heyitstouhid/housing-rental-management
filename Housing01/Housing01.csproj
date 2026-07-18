@@ -172,7 +172,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Images\welcome.png" />
+    <None Include="Images\admin.png" />
+    <None Include="Images\admin2.png" />
+    <None Include="Images\add.png" />
     <Content Include="Images\category32.png" />
+    <None Include="Images\exit1.png" />
     <Content Include="Images\house32.png" />
     <Content Include="Images\Lock.png" />
     <Content Include="Images\loginBackgroud.jpg" />

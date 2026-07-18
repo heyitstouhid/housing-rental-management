@@ -163,7 +163,12 @@ namespace Housing01
             }           
         }
 
-       
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
 
         //private void btnSelectHouse_Click(object sender, EventArgs e)
         //{

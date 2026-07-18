@@ -41,15 +41,7 @@ namespace Housing01
             this.dgvUserList.DataSource = ds1.Tables[0];
             this.SetDgvWidth();
         }
-        private void SetDgvWidth() //Set the width of each column in the dgvUserList
-        {
-            this.dgvUserList.Columns[0].Width = 60;  //Set the width of the first column
-            this.dgvUserList.Columns[1].Width = 100;
-            this.dgvUserList.Columns[2].Width = 100;
-            this.dgvUserList.Columns[3].Width = 100;
-            this.dgvUserList.Columns[4].Width = 100;
-            this.dgvUserList.Columns[5].Width = 120;
-        }
+
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -70,7 +62,7 @@ namespace Housing01
         }
         private DataSet QueryAll()//Retrieve all admin info.
         {
-            string sqlStr = string.Format("select * from Admin");
+            string sqlStr = string.Format("select AdminID,LoginName,LoginPwd,RealName,Phone,Email from Admin");
             DataSet ds1 = new DataSet();
             ds1 = SQLHelper.GetData(sqlStr);
             return ds1;
@@ -131,6 +123,50 @@ namespace Housing01
             {
                 MessageBox.Show("delete is failure.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvUserList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void SetDgvWidth() //Set the width of each column in the dgvUserList
+        {
+            // Ensure there are enough columns
+            if (this.dgvUserList.Columns.Count >= 1) this.dgvUserList.Columns[0].Width = 60;  // AdminID
+            if (this.dgvUserList.Columns.Count >= 2) this.dgvUserList.Columns[1].Width = 100; // LoginName
+            if (this.dgvUserList.Columns.Count >= 3) this.dgvUserList.Columns[2].Width = 100; // LoginPwd
+            if (this.dgvUserList.Columns.Count >= 4) this.dgvUserList.Columns[3].Width = 100; // RealName
+            if (this.dgvUserList.Columns.Count >= 5) this.dgvUserList.Columns[4].Width = 100; // Phone
+            if (this.dgvUserList.Columns.Count >= 6) this.dgvUserList.Columns[5].Width = 180; // Email wider
+
+            // Header text adjustments
+            if (this.dgvUserList.Columns.Count >= 1) this.dgvUserList.Columns[0].HeaderText = "User ID";
+            if (this.dgvUserList.Columns.Count >= 2) this.dgvUserList.Columns[1].HeaderText = "Login Name";
+            if (this.dgvUserList.Columns.Count >= 3) this.dgvUserList.Columns[2].HeaderText = "Login Pass";
+            if (this.dgvUserList.Columns.Count >= 4) this.dgvUserList.Columns[3].HeaderText = "Real Name";
+            if (this.dgvUserList.Columns.Count >= 5) this.dgvUserList.Columns[4].HeaderText = "Phone";
+            if (this.dgvUserList.Columns.Count >= 6) this.dgvUserList.Columns[5].HeaderText = "Email";
         }
     }
 }

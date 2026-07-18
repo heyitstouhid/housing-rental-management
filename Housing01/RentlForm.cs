@@ -239,6 +239,11 @@ namespace Housing01
             this.Close();
         }
 
+        private void cmbCondition_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
 
         //private void btnSelectRental_Click(object sender, EventArgs e)
         //{

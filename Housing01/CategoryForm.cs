@@ -132,5 +132,20 @@ namespace Housing01
         {
             this.Close();//Close this form.
         }
+
+        private void btnAdd_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdate_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
